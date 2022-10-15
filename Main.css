@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    font-family:Roboto;
+    padding: 0;
+}
+
+body{
+    background: #082032;
+}
+
+/*Scrollbar sol*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav{
+    background: #2C394B;
+    height: 62px;
+    position: relative;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    line-height: 60px;
+}
+
+.links .link{
+    display: inline-block;
+}
+
+.links .link a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 25px;
+    transition: .5s;
+}
+
+.links .link a:hover{
+    cursor: pointer;
+}
+
+.button1{
+    color: white;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 25px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 800px){
+    .button1{
+        display: inline-block;
+        z-index: 1;
+    }
+
+    .links{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: #2C394B;
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        top: -100vh;
+    }
+
+    .active{
+        top: 58px;
+        transition: .5s;
+    }
+
+    .links .link:hover{
+        background: #334756;
+        transition: .5s;
+    }
+
+    .section1{
+        flex-direction: column;
+    }
+    .saludo{
+        margin-top: 20px;
+        transform: translateY(-50%);
+    }
+    .foto{
+        margin-left: 25px;
+        transform: translateY(-50%);
+        
+    }
+
+}
+
+.fondo{
+    background: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.section1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: translateY(50%);
+}
+
+.foto{
+    width: 200px;
+    height: 200px;
+    background: url(img/foto.jpg);
+    background-position-y: -20px;
+    border: solid 5px #2C394B;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    border-radius: 500px;
+}
+
+.saludo{
+    background-color: rgba(0,0,0, 0.4);
+    backdrop-filter: blur(2px);
+    width: 40%;
+    margin-left: 25px;
+    border:solid 5px #2C394B;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.saludo h1{
+    margin: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
